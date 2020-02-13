@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  
+    <p v-if="seen" v-bind:title="message">Now you can see</p>
+
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.txt }}
+      </li>
+    </ol>
+
+
+    <p> {{ message2 }} </p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+
+
+    <p> {{ message3 }} </p>
+    <input v-model="message3">
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
+
+
